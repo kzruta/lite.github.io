@@ -46,14 +46,14 @@
                 return `${height}м; ${chamberValues}`;
             },
             'Прицепы': function() {
-                var attachments = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
+                var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('washerLength').value;
                 return `${attachmentValues}; ${length}`;
             },
             'Стиралки': function() {
-                var attachments = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
+                var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('stirLength').value;
                 return `${attachmentValues}; ${length}`;
             },
@@ -81,7 +81,7 @@
 
     <select id="categorySelect" onchange="showDetails()">
         <option value="">Выберите категорию</option>
-        <option value="Холодильники">3Xолодильники</option>
+        <option value="Холодильники">5Xолодильники</option>
         <option value="Стиралки">Стиралки</option>
         <option value="Прицепы">Прицепы</option>
     </select>
@@ -110,14 +110,14 @@
     </div>
     <div id="washerDetails" style="display:none">
         <h3>Прицеп для...</h3>
-        <input type="checkbox" name="attachments" value="для авто" onchange="updateResult()">для авто<br>
-        <input type="checkbox" name="attachments" value="для лодки" onchange="updateResult()">для лодки<br>
+        <input type="checkbox" name="chambers" value="для авто" onchange="updateResult()">для авто<br>
+        <input type="checkbox" name="chambers" value="для лодки" onchange="updateResult()">для лодки<br>
         <h3>Количество осей</h3>
-        <input type="checkbox" name="attachments" value="1 ось" onchange="updateResult()">1 ось<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="attachments" value="2 оси" onchange="updateResult()">2 оси<br>
+        <input type="checkbox" name="chambers" value="1 ось" onchange="updateResult()">1 ось<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="2 оси" onchange="updateResult()">2 оси<br>
         <h3>Категория прав</h3>
-        <input type="checkbox" name="attachments" value="кат В" onchange="updateResult()">кат В<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="attachments" value="кат Е" onchange="updateResult()">кат Е<br>
+        <input type="checkbox" name="chambers" value="кат В" onchange="updateResult()">кат В<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="кат Е" onchange="updateResult()">кат Е<br>
         <h3>Длина</h3>
         <input type="text" id="washerLength" onchange="updateResult()">
         <h3>Ширина</h3>
@@ -134,11 +134,11 @@
 
     <div id="stirDetails" style="display:none">
         <h3>Загрузка машинки, кг</h3>
-        <input type="checkbox" name="attachments" value="3кг" onchange="updateResult()">3кг<br>
-        <input type="checkbox" name="attachments" value="4кг" onchange="updateResult()">4кг<br>
-        <input type="checkbox" name="attachments" value="5кг" onchange="updateResult()">5кг<br>
-        <input type="checkbox" name="attachments" value="6кг" onchange="updateResult()">6кг<br>
-        <input type="checkbox" name="attachments" value="более 6кг" onchange="updateResult()">более 6кг<br>
+        <input type="checkbox" name="chambers" value="3кг" onchange="updateResult()">3кг<br>
+        <input type="checkbox" name="chambers" value="4кг" onchange="updateResult()">4кг<br>
+        <input type="checkbox" name="chambers" value="5кг" onchange="updateResult()">5кг<br>
+        <input type="checkbox" name="chambers" value="6кг" onchange="updateResult()">6кг<br>
+        <input type="checkbox" name="chambers" value="более 6кг" onchange="updateResult()">более 6кг<br>
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
