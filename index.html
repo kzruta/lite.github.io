@@ -92,13 +92,12 @@
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
-        <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
+        <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> !наличные<br>
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
     <br>
     <!-- Shared result field and button -->
-
-    <textarea id="resultField" rows="3" cols="30"></textarea><br>
+    <textarea id="resultField" rows="3" cols="30" style="display:none"></textarea><br>
     <button onclick="copyToClipboard()">Копировать</button>
 </div>
 </body>
