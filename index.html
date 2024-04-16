@@ -1,131 +1,77 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>Форма выбора характеристик</title>
-	<style>
-    #resultField {
-        width: 300px; /* Увеличиваем ширину текстового поля */
-        height: 100px; /* Увеличиваем высоту текстового поля */
-        display: block; /* Для того, чтобы блок был виден */
-    }
-</style>
-	<script>
-	function categoryChanged() {
-	            var category = document.getElementById('categorySelect').value;
-	            var fridgeDetails = document.getElementById('fridgeDetails');
-	            var resultField = document.getElementById('resultField');
-	            var copyButton = document.getElementById('copyButton');
-	
-	            if (category === 'Холодильники') {
-	                fridgeDetails.style.display = 'block';
-	                resultField.style.display = 'block';
-	                copyButton.style.display = 'block';
-	            } else {
-	                fridgeDetails.style.display = 'none';
-	                resultField.style.display = 'none';
-	                copyButton.style.display = 'none';
-	            }
-				if (category === 'Прицепы') {
-	                fridgeDetails.style.display = 'block';
-	                resultField.style.display = 'block';
-	                copyButton.style.display = 'block';
-	            } else {
-	                fridgeDetails.style.display = 'none';
-	                resultField.style.display = 'none';
-	                copyButton.style.display = 'none';
-	            }
-	            resultField.value = ''; // Clear field when category changes
-	        }
-	
-	        function updateResult() {
-	            var height = document.getElementById('fridgeHeight').value;
-	            var chambers = document.querySelectorAll('input[name="chambers"]:checked');
-	            var chamberValues = Array.from(chambers).map(function(chamber) { return chamber.value; });
-	            var resultField = document.getElementById('resultField');
-	
-	            resultField.value = height + 'м; ' + chamberValues.join(', ');
-	        }
-	
-	        function copyResult() {
-	            var resultField = document.getElementById('resultField');
-	            resultField.select();
-	            document.execCommand('copy');
-	        }
-	
-	        // This function initializes the hidden blocks on load to be hidden
-	        window.onload = function() {
-	            categoryChanged();
-	        };
-	</script>
-	<script>function updateResult() {
-    var height = document.getElementById('fridgeHeight').value;
-    var chambers = document.querySelectorAll('input[name="chambers"]:checked');
-    var chamberValues = Array.from(chambers).map(function(chamber) { return chamber.value; });
-    var resultField = document.getElementById('resultField');
+    <title>Форма выбора оборудования</title>
+    <script>
+        function showDetails() {
+            var category = document.getElementById('categorySelect').value;
+            var fridgeDetails = document.getElementById('fridgeDetails');
+            var washerDetails = document.getElementById('washerDetails');
+            var resultField = document.getElementById('resultField');
 
-    // Получаем текущий текст
-    var currentText = resultField.value;
-    
-    // Обновляем только часть с данными диапазона и чекбоксов, сохраняя произвольный текст пользователя
-    var newText = currentText.split(';')[0];
-    resultField.value = newText + "; " + height + 'м; ' + chamberValues.join(', ');
-}</script>
+            fridgeDetails.style.display = 'none';
+            washerDetails.style.display = 'none';
+
+            if (category === 'Холодильники') {
+                fridgeDetails.style.display = 'block';
+            } else if (category === 'Стиралки') {
+                washerDetails.style.display = 'block';
+            }
+
+            // Clear result field
+            resultField.value = '';
+        }
+
+        function updateResult() {
+            var category = document.getElementById('categorySelect').value;
+            var resultField = document.getElementById('resultField');
+
+            if (category === 'Холодильники') {
+                // Update result for refrigerators
+                var height = document.getElementById('fridgeHeight').value;
+                var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                resultField.value = `${height}м; ${chamberValues}`;
+            } else if (category === 'Стиралки') {
+                // Update result for washers
+                var attachments = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
+                var length = document.getElementById('washerLength').value;
+                resultField.value = `${attachmentValues}; ${length}`;
+            }
+        }
+
+        function copyToClipboard() {
+            var resultField = document.getElementById('resultField');
+            resultField.select();
+            document.execCommand('copy');
+        }
+    </script>
 </head>
+<body>
 
-<body> 
-		<select id="categorySelect" onchange="categoryChanged()">
-        	<option value="none">Выберите категорию</option>
-        	<option value="Холодильники">Холодильники</option>
-        	<option value="Стиралки">Стиралки</option>
-			<option value="Стиралки">Прицепы</option>
+    <select id="categorySelect" onchange="showDetails()">
+        <option value="">Выберите категорию</option>
+        <option value="Холодильники">Холодильники</option>
+        <option value="Стиралки">Стиралки</option>
     </select>
-	<div id="fridgeDetails" style="display:none">
-		<h3>Высота холодильника</h3> <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5">
-		<h3>Количество морозильных камер</h3> 
-		<input type="checkbox" id="chamber1" name="chambers" value="1 камера" onchange="updateResult()"> 1 камера<br> 
-		<input type="checkbox" id="chamber2" name="chambers" value="2 камеры" onchange="updateResult()"> 2 камеры<br> 
-		
-		<input type="checkbox" id="chamber3" name="chambers" value="3 камеры" onchange="updateResult()"> 3 камеры<br> 
-		<input type="checkbox" id="chamber4" name="chambers" value="4 камеры" onchange="updateResult()"> 4 камеры<br> 
-	
 
+    <div id="fridgeDetails" style="display:none">
+        <!-- Fridge details will go here -->
+        <!-- ... -->
+    </div>
 
-		<h3>Как планируете оплачивать</h3>
-		<input type="checkbox" id="chamber1f" name="chambers" value="рассрочка" onchange="updateResult()">рассрочка<br> 
-		<input type="checkbox" id="chamber2f" name="chambers" value="кредит" onchange="updateResult()"> кредит<br> 
-		<input type="checkbox" id="chamber3f" name="chambers" value="наличными" onchange="updateResult()">наличными<br> <br> 
-		<input type="checkbox" id="chamber4f" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br> 
-	</div>
+    <div id="washerDetails" style="display:none">
+        <h3>Прицеп для...</h3>
+        <input type="checkbox" name="attachments" value="для авто" onchange="updateResult()">для авто<br>
+        <input type="checkbox" name="attachments" value="для лодки" onchange="updateResult()">для лодки<br>
+        <h3>Длина</h3>
+        <input type="text" id="washerLength" onchange="updateResult()">
+    </div>
 
-		<textarea id="resultField" onclick="this.focus();this.select()"></textarea>
-		<button id="copyButton" onclick="copyResult()" style="display:none">Копировать</button> 
-	
-	</body>
-	
+    <!-- Shared result field and button -->
+    <textarea id="resultField" rows="3" cols="30"></textarea><br>
+    <button onclick="copyToClipboard()">Копировать</button>
 
-
-
-
-
-	<div id="fridgeDetails" style="display:none">
-		<h3>Длина</h3> <input type="range" id="fridgeHeight" min="0.5" max="3" step="0.1" onchange="updateResult()" value="0.5">
-		<h3>Ширина</h3> <input type="range" id="fridgeHeight" min="0.5" max="3" step="0.1" onchange="updateResult()" value="0.5">
-		<h3>Прицеп для</h3>
-		<input type="checkbox" id="chamber1" name="chambers" value="для автомобиля" onchange="updateResult()"> для автомобиля<br> 
-		<input type="checkbox" id="chamber2" name="chambers" value="для лодки" onchange="updateResult()"> для лодки<br> 
-</div> 
-
-
-	<h3>Как планируете оплачивать</h3>
-		<input type="checkbox" id="chamber11" name="chambers" value="рассрочка" onchange="updateResult()">рассрочка<br> 
-		<input type="checkbox" id="chamber22" name="chambers" value="кредит" onchange="updateResult()"> кредит<br> 
-		<input type="checkbox" id="chamber33" name="chambers" value="наличными" onchange="updateResult()">наличными<br> <br> 
-		<input type="checkbox" id="chamber44" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br> 
-</div>
-
-		<textarea id="resultField" onclick="this.focus();this.select()"></textarea>
-		<button id="copyButton" onclick="copyResult()" style="display:none">Копировать</button> </body>
-
-
+</body>
 </html>
