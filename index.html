@@ -40,7 +40,7 @@
         // Функции для обновления результатов каждой категории
         var resultUpdater = {
             'Холодильники': function() {
-                <!-- var height = document.getElementById('fridgeHeight').value; -->
+                
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 return ` ${chamberValues}`;
