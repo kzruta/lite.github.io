@@ -85,20 +85,15 @@
 
     <select id="categorySelect" onchange="showDetails()">
         <option value="">Выберите категорию</option>
-        <option value="Холодильники">Xолодильники</option>
-        <option value="Стиралки">Стиралки</option>
+        <option value="Холодильники">XХолодильники</option>
+        <option value="Холодильники">Стиралки</option>
         <option value="Прицепы">Прицепы</option>
     </select>
 
     <div id="fridgeDetails" style="display:none">
         <!-- Fridge details will go here -->
         <h3>Высота холодильника</h3>
-        <!-- <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5"> !!!!!!!!!!!БЕГУНОК-->
-        <input type="checkbox" id="chamber4" name="chambers" value="до 1м" onchange="updateResult()"> до 1м<br>
-        <input type="checkbox" id="chamber1" name="chambers" value="1,5м" onchange="updateResult()"> 1,5м<br>
-        <input type="checkbox" id="chamber2" name="chambers" value="2м" onchange="updateResult()"> 2м<br>
-        <input type="checkbox" id="chamber3" name="chambers" value="выше 2м" onchange="updateResult()"> выше 2м<br>
-        <br>
+        <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5">
         <h3>Количество морозильных камер</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="1 камера" onchange="updateResult()"> 1 камера<br>
         <input type="checkbox" id="chamber2" name="chambers" value="2 камеры" onchange="updateResult()"> 2 камеры<br>
