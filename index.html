@@ -11,23 +11,32 @@
     </style>
     <script>
         function showDetails() {
-            var category = document.getElementById('categorySelect').value;
-            var fridgeDetails = document.getElementById('fridgeDetails');
-            var washerDetails = document.getElementById('washerDetails');
-            var resultField = document.getElementById('resultField');
-
-            fridgeDetails.style.display = 'none';
-            washerDetails.style.display = 'none';
-
-            if (category === 'Холодильники') {
-                fridgeDetails.style.display = 'block';
-            } else if (category === 'Прицепы') {
-                washerDetails.style.display = 'block';
+            var categoryDetails = {
+                'Холодильники': 'fridgeDetails',
+                'Прицепы': 'washerDetails',
+                'Стиралки': 'stirDetails',
+            };
+            
+            function showDetails() {
+                var category = document.getElementById('categorySelect').value;
+                var resultField = document.getElementById('resultField');
+            
+                // Скрываем все блоки
+                for (var key in categoryDetails) {
+                    var element = document.getElementById(categoryDetails[key]);
+                    if (element) {
+                        element.style.display = 'none';
+                    }
+                }
+            
+                // Отображаем только нужный блок, основанный на выбранной категории
+                if (categoryDetails.hasOwnProperty(category)) {
+                    document.getElementById(categoryDetails[category]).style.display = 'block';
+                }
+            
+                // Очищаем поле результатов
+                resultField.value = '';
             }
-
-            // Clear result field
-            resultField.value = '';
-        }
 
         function updateResult() {
             var category = document.getElementById('categorySelect').value;
@@ -60,6 +69,7 @@
     <select id="categorySelect" onchange="showDetails()">
         <option value="">Выберите категорию</option>
         <option value="Холодильники">Холодильники</option>
+        <option value="Холодильники">Стиралки</option>
         <option value="Прицепы">Прицепы</option>
     </select>
 
@@ -96,6 +106,22 @@
         <h3>Ширина</h3>
         <input type="text" id="washerLength" onchange="updateResult()">
         <br>
+        <br>
+        <h3>Как будете оплачивать</h3>
+        <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
+        <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
+        <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
+        <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
+    </div>
+    <br>
+
+    <div id="stirDetails" style="display:none">
+        <h3>Загрузка машинки, кг</h3>
+        <input type="checkbox" name="attachments" value="3кг" onchange="updateResult()">3кг<br>
+        <input type="checkbox" name="attachments" value="4кг" onchange="updateResult()">4кг<br>
+        <input type="checkbox" name="attachments" value="5кг" onchange="updateResult()">5кг<br>
+        <input type="checkbox" name="attachments" value="6кг" onchange="updateResult()">6кг<br>
+        <input type="checkbox" name="attachments" value="более 6кг" onchange="updateResult()">более 6кг<br>
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
