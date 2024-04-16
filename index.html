@@ -74,7 +74,10 @@
         <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
-
+    <br>
+    <!-- Shared result field and button -->
+    <textarea id="resultField" rows="3" cols="30"></textarea><br>
+    <button onclick="copyToClipboard()">Копировать</button>
     <div id="washerDetails" style="display:none">
         <h3>Прицеп для...</h3>
         <input type="checkbox" name="attachments" value="для авто" onchange="updateResult()">для авто<br>
@@ -83,14 +86,13 @@
         <input type="text" id="washerLength" onchange="updateResult()">
         <br>
         <br>
-        <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
         <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
-
+    <br>
     <!-- Shared result field and button -->
     <textarea id="resultField" rows="3" cols="30"></textarea><br>
     <button onclick="copyToClipboard()">Копировать</button>
