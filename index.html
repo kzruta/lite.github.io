@@ -53,9 +53,8 @@
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('stirLength').value;
-                return `${attachmentValues}; ${length}`;
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                return `${chamberValues}`;
             },
         };
 
@@ -81,7 +80,7 @@
 
     <select id="categorySelect" onchange="showDetails()">
         <option value="">Выберите категорию</option>
-        <option value="Холодильники">5Xолодильники</option>
+        <option value="Холодильники">6Xолодильники</option>
         <option value="Стиралки">Стиралки</option>
         <option value="Прицепы">Прицепы</option>
     </select>
