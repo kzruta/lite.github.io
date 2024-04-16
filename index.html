@@ -2,6 +2,13 @@
 <html>
 <head>
     <title>Форма выбора оборудования</title>
+    <style>
+        #resultField {
+            width: 300px; /* Увеличиваем ширину текстового поля */
+            height: 100px; /* Увеличиваем высоту текстового поля */
+            display: block; /* Для того, чтобы блок был виден */
+        }
+    </style>
     <script>
         function showDetails() {
             var category = document.getElementById('categorySelect').value;
@@ -90,7 +97,7 @@
     </div>
     <br>
     <!-- Shared result field and button -->
-    <textarea id="resultField" style="display:none" onclick="this.focus();this.select()"></textarea>
+    
     <textarea id="resultField" rows="3" cols="30"></textarea><br>
     <button onclick="copyToClipboard()">Копировать</button>
 
