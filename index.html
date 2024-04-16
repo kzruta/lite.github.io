@@ -10,43 +10,67 @@
         }
     </style>
     <script>
+        var categoryDetails = {
+            'Холодильники': 'fridgeDetails',
+            'Прицепы': 'washerDetails',
+            'Стиралки': 'stirDetails',
+            // Добавьте новые категории здесь, например:
+            // 'Категория3': 'detailsId3',
+            // 'Категория4': 'detailsId4',
+            // и так далее...
+        };
+        
         function showDetails() {
             var category = document.getElementById('categorySelect').value;
-            var fridgeDetails = document.getElementById('fridgeDetails');
-            var washerDetails = document.getElementById('washerDetails');
-            var stirDetails = document.getElementById('stirDetails');
             var resultField = document.getElementById('resultField');
-
-            fridgeDetails.style.display = 'none';
-            washerDetails.style.display = 'none';
-            stirDetails.style.display = 'none';
-
-            if (category === 'Холодильники') {
-                fridgeDetails.style.display = 'block';
-            } else if (category === 'Прицепы') {
-                washerDetails.style.display = 'block';
+        
+            // Скрываем все блоки
+            for (var key in categoryDetails) {
+                var element = document.getElementById(categoryDetails[key]);
+                if (element) {
+                    element.style.display = 'none';
+                }
             }
-
-            // Clear result field
+        
+            // Отображаем только нужный блок, основанный на выбранной категории
+            if (categoryDetails.hasOwnProperty(category)) {
+                document.getElementById(categoryDetails[category]).style.display = 'block';
+            }
+        
+            // Очищаем поле результатов
             resultField.value = '';
         }
+
+        // Функции для обновления результатов каждой категории
+        var resultUpdater = {
+            'Холодильники': function() {
+                var height = document.getElementById('fridgeHeight').value;
+                var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                return `${height}м; ${chamberValues}`;
+            },
+            'Прицепы': function() {
+                var attachments = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
+                var length = document.getElementById('washerLength').value;
+                return `${attachmentValues}; ${length}`;
+            },
+            'Стиралки': function() {
+                var attachments = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
+                var length = document.getElementById('stirLength').value;
+                return `${attachmentValues}; ${length}`;
+            },
+        };
 
         function updateResult() {
             var category = document.getElementById('categorySelect').value;
             var resultField = document.getElementById('resultField');
 
-            if (category === 'Холодильники') {
-                // Update result for refrigerators
-                var height = document.getElementById('fridgeHeight').value;
-                var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
-                resultField.value = `${height}м; ${chamberValues}`;
-            } else if (category === 'Прицепы') {
-                // Update result for washers
-                var attachments = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(attachments).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('washerLength').value;
-                resultField.value = `${attachmentValues}; ${length}`;
+            // Проверяем, есть ли функция обновления для выбранной категории
+            if (resultUpdater.hasOwnProperty(category)) {
+                // Обновляем результат с помощью функции, соответствующей категории
+                resultField.value = resultUpdater[category]();
             }
         }
 
@@ -75,7 +99,6 @@
         <input type="checkbox" id="chamber2" name="chambers" value="2 камеры" onchange="updateResult()"> 2 камеры<br>
         <input type="checkbox" id="chamber3" name="chambers" value="3 камеры" onchange="updateResult()"> 3 камеры<br>
         <input type="checkbox" id="chamber4" name="chambers" value="4 камеры" onchange="updateResult()"> 4 камеры<br>
-        <br>
         <br>
         <br>
         <h3>Как будете оплачивать</h3>
