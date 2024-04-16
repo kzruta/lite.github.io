@@ -40,10 +40,10 @@
         // Функции для обновления результатов каждой категории
         var resultUpdater = {
             'Холодильники': function() {
-                var height = document.getElementById('fridgeHeight').value;
+                <!-- var height = document.getElementById('fridgeHeight').value; -->
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
-                return `${height}м; ${chamberValues}`;
+                return ` ${chamberValues}`;
             },
             'Прицепы': function() {
                 var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
@@ -89,7 +89,7 @@
     <div id="fridgeDetails" style="display:none">
         <!-- Fridge details will go here -->
         <h3>Высота холодильника</h3>
-        <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5" style="display:none">
+        <!-- <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5" style="display:none"> -->
         <input type="checkbox" id="chamber4" name="chambers" value="до 1м" onchange="updateResult()"> до 1м<br>
         <input type="checkbox" id="chamber1" name="chambers" value="1,5м" onchange="updateResult()"> 1,5м<br>
         <input type="checkbox" id="chamber2" name="chambers" value="2м" onchange="updateResult()"> 2м<br>
