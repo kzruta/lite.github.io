@@ -11,32 +11,25 @@
     </style>
     <script>
         function showDetails() {
-            var categoryDetails = {
-                'Холодильники': 'fridgeDetails',
-                'Прицепы': 'washerDetails',
-                'Стиралки': 'stirDetails',
-            };
-            
-            function showDetails() {
-                var category = document.getElementById('categorySelect').value;
-                var resultField = document.getElementById('resultField');
-            
-                // Скрываем все блоки
-                for (var key in categoryDetails) {
-                    var element = document.getElementById(categoryDetails[key]);
-                    if (element) {
-                        element.style.display = 'none';
-                    }
-                }
-            
-                // Отображаем только нужный блок, основанный на выбранной категории
-                if (categoryDetails.hasOwnProperty(category)) {
-                    document.getElementById(categoryDetails[category]).style.display = 'block';
-                }
-            
-                // Очищаем поле результатов
-                resultField.value = '';
+            var category = document.getElementById('categorySelect').value;
+            var fridgeDetails = document.getElementById('fridgeDetails');
+            var washerDetails = document.getElementById('washerDetails');
+            var stirDetails = document.getElementById('stirDetails');
+            var resultField = document.getElementById('resultField');
+
+            fridgeDetails.style.display = 'none';
+            washerDetails.style.display = 'none';
+            stirDetails.style.display = 'none';
+
+            if (category === 'Холодильники') {
+                fridgeDetails.style.display = 'block';
+            } else if (category === 'Прицепы') {
+                washerDetails.style.display = 'block';
             }
+
+            // Clear result field
+            resultField.value = '';
+        }
 
         function updateResult() {
             var category = document.getElementById('categorySelect').value;
