@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷2Вопросы</title>
+    <title>🔷3Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -72,7 +72,6 @@
                 return `${attachmentValues}; ${length}; ${length1};`;
             },
             'Лафеты (прицепы для лодок)': function() {
-                var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
