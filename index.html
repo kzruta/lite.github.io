@@ -17,18 +17,18 @@
             'Лафеты (прицепы для лодок)': 'lafDetails',
             'Мотоциклы': 'motoDetails',
             'Скутеры': 'skuDetails',
-            'Мопеды': '44Details',
-            'Квадроциклы': '55Details',
-            'Генераторы': '66Details',
-            'Мотоблоки и культиваторы': '77Details',
-            'Адаптеры для мотоблоков': '88Details',
-            'Навесное на мотоблок': '99Details',
-            'Двигатели к мотоблокам': '111Details',
-            'Навесное для минитракторов': '222Details',
-            'Электротранспорт': '333Details',
-            'Лодки': '444Details',
-            'Лодочные моторы': '555Details',
-            'Велосипеды': '666Details',
+            'Мопеды': 'mopDetails',
+            'Квадроциклы': 'kvDetails',
+            'Генераторы': 'genDetails',
+            'Мотоблоки и культиваторы': 'blDetails',
+            'Адаптеры для мотоблоков': 'ablDetails',
+            'Навесное на мотоблок': 'nblDetails',
+            'Двигатели к мотоблокам': 'dmbDetails',
+            'Навесное для минитракторов': 'ntDetails',
+            'Электротранспорт': 'elDetails',
+            'Лодки': 'lodDetails',
+            'Лодочные моторы': 'lodmDetails',
+            'Велосипеды': 'velDetails',
         };
         
         function showDetails() {
@@ -96,98 +96,98 @@
 
             },
             'Мопеды': function() {
-                var chambers = document.querySelectorAll('#44Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#mopDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('44Length').value;
-                var length1 = document.getElementById('44Length1').value;
+                var length = document.getElementById('mopLength').value;
+                var length1 = document.getElementById('mop1Length').value;
                 return `${attachmentValues}; ${length}; ${length1}`;
 
             },
             'Квадроциклы': function() {
-                var chambers = document.querySelectorAll('#55Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#kvDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('55Length').value;
+                var length = document.getElementById('kvLength').value;
                 return `${attachmentValues}; ${length};`;
 
             },
             'Генераторы': function() {
-                var chambers = document.querySelectorAll('#66Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#genDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('66Length').value;
-                var length = document.getElementById('66Length1').value;
+                var length = document.getElementById('genLength').value;
+                var length = document.getElementById('gen1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Мотоблоки и культиваторы': function() {
-                var chambers = document.querySelectorAll('#77Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('77Length').value;
+                var length = document.getElementById('blLength').value;
                 return `${attachmentValues}; ${length};`;
 
             },
             'Адаптеры для мотоблоков': function() {
-                var chambers = document.querySelectorAll('#88Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#ablDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('88Length').value;
-                var length1 = document.getElementById('88Length1').value;
+                var length = document.getElementById('ablLength').value;
+                var length1 = document.getElementById('abl1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Навесное на мотоблок': function() {
-                var chambers = document.querySelectorAll('#99Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#nblDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('99Length').value;
+                var length = document.getElementById('nblLength').value;
                 return `${attachmentValues}; ${length};`;
 
             },
             'Двигатели к мотоблокам': function() {
-                var chambers = document.querySelectorAll('#111Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#dblDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('111Length').value;
-                var length = document.getElementById('111Length1').value;
+                var length = document.getElementById('dblLength').value;
+                var length = document.getElementById('dbl1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Навесное для минитракторов': function() {
-                var chambers = document.querySelectorAll('#222Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#ntDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('222Length').value;
-                var length = document.getElementById('222Length1').value;
-                var length2 = document.getElementById('222Length2').value;
+                var length = document.getElementById('ntLength').value;
+                var length = document.getElementById('nt1Length').value;
+                var length2 = document.getElementById('nt2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Электротранспорт': function() {
-                var chambers = document.querySelectorAll('#333Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#elDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('333Length').value;
-                var length = document.getElementById('333Length1').value;
-                var length2 = document.getElementById('333Length2').value;
+                var length = document.getElementById('elLength').value;
+                var length = document.getElementById('el1Length').value;
+                var length2 = document.getElementById('el2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Лодки': function() {
-                var chambers = document.querySelectorAll('#444Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#lodDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('444Length').value;
-                var length = document.getElementById('444Length1').value;
+                var length = document.getElementById('lodLength').value;
+                var length = document.getElementById('lod1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Лодочные моторы': function() {
-                var chambers = document.querySelectorAll('#555Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#lodm5Details input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('555Length').value;
-                var length = document.getElementById('555Length1').value;
-                var length2 = document.getElementById('555Length2').value;
+                var length = document.getElementById('lodmLength').value;
+                var length = document.getElementById('lodm1Length').value;
+                var length2 = document.getElementById('lodm2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Велосипеды': function() {
-                var chambers = document.querySelectorAll('#666Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#velDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('666Length').value;
-                var length = document.getElementById('666Length1').value;
+                var length = document.getElementById('velLength').value;
+                var length = document.getElementById('vel1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
@@ -337,12 +337,12 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="44Details" style="display:none">
+    <div id="mopDetails" style="display:none">
         <h3>Объем двигателя, мощность?</h3>
-        <input type="text" id="44Length" onchange="updateResult()">
+        <input type="text" id="mopLength" onchange="updateResult()">
         <br>
         <h3>Категория прав?</h3>
-        <input type="text" id="44Length1" onchange="updateResult()">
+        <input type="text" id="mop1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -351,9 +351,9 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="55Details" style="display:none">
+    <div id="kvDetails" style="display:none">
         <h3>Объем двигателя, мощность?</h3>
-        <input type="text" id="55Length" onchange="updateResult()">
+        <input type="text" id="kvLength" onchange="updateResult()">
         <br>
         <h3>Для кого</h3>
         <p><i>ребенок -- объем двиг. 50-125//взрослый -- от 200</i></p>
@@ -367,12 +367,12 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="66Details" style="display:none">
+    <div id="genDetails" style="display:none">
         <h3>Сколько устройств?</h3>
-        <input type="text" id="66Length" onchange="updateResult()">
+        <input type="text" id="genLength" onchange="updateResult()">
         <br>
         <h3>Планируете ли подключать мощные интсрументы? (сварка, болгарки, станки)</h3>
-        <input type="text" id="66Length1" onchange="updateResult()">
+        <input type="text" id="gen1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -381,9 +381,9 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="77Details" style="display:none">
+    <div id="blDetails" style="display:none">
         <h3>Сколько соток земли планируете обрабатывать?</h3>
-        <input type="text" id="77Length" onchange="updateResult()">
+        <input type="text" id="blLength" onchange="updateResult()">
         <br>
         <h3>Планируете ли подключать мощные интсрументы? (сварка, болгарки, станки)</h3>
         <input type="text" id="66Length1" onchange="updateResult()">
@@ -403,13 +403,13 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="88Details" style="display:none">
+    <div id="ablDetails" style="display:none">
         <p><i>Модуль переоборудования</i></p>
         <h3>Какой у вас мотоблок?</h3>
-        <input type="text" id="88Length" onchange="updateResult()">
+        <input type="text" id="ablLength" onchange="updateResult()">
         <br>
         <h3>Сколько л.с.(лошад. сил)?</h3>
-        <input type="text" id="88Length1" onchange="updateResult()">
+        <input type="text" id="abl1Length" onchange="updateResult()">
         <br>
         <h3>Есть ли ВОМ (вал отбора мощности - активная навеска?)</h3>
         <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()">Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
@@ -421,13 +421,13 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="99Details" style="display:none">
+    <div id="nblDetails" style="display:none">
         <h3>Для какого оборудования?</h3>
         <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()">мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="минитрактор" onchange="updateResult()">минитрактор<br>
         <br>
         <h3>Сколько л.с.(лошад. сил)?</h3>
-        <input type="text" id="99Length" onchange="updateResult()">
+        <input type="text" id="nblLength" onchange="updateResult()">
         <br>
         <h3>Производство Китай или РБ?</h3>
         <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()">Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
@@ -442,12 +442,12 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="111Details" style="display:none">
+    <div id="dmbDetails" style="display:none">
         <h3>Какой у вас мотоблок?</h3>
-        <input type="text" id="111Length" onchange="updateResult()">
+        <input type="text" id="dmbLength" onchange="updateResult()">
         <br>
         <h3>Сколько л.с.(лошад. сил)?</h3>
-        <input type="text" id="111Length1" onchange="updateResult()">
+        <input type="text" id="dmb1Length" onchange="updateResult()">
         <br>
         <h3>Шпонка или шлиц (каким образом крепится)?</h3>
         <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()">шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
@@ -459,15 +459,15 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="222Details" style="display:none">
+    <div id="ntDetails" style="display:none">
         <h3>Что вам необходимо?</h3>
-        <input type="text" id="222Length" onchange="updateResult()">
+        <input type="text" id="ntLength" onchange="updateResult()">
         <br>
         <h3>Какой у вас минитрактор?</h3>
-        <input type="text" id="222Length1" onchange="updateResult()">
+        <input type="text" id="nt1Length" onchange="updateResult()">
         <br>
         <h3>Сколько л.с.(лошад. сил)?</h3>
-        <input type="text" id="222Length2" onchange="updateResult()">
+        <input type="text" id="nt2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -476,11 +476,11 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="333Details" style="display:none">
+    <div id="elDetails" style="display:none">
         <p><i>Электромотоциклы не продаем, предлагать альтернативу - бензиновый. </i></p>
         <p><i>Батареи литионные </i></p>
         <h3>Тип транспорта</h3>
-        <input type="text" id="333Length" onchange="updateResult()">
+        <input type="text" id="elLength" onchange="updateResult()">
         <br>
         <br>
         <h3>Для кого</h3>
@@ -488,10 +488,10 @@
         <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
         <br>
         <h3>Запас хода (пробег на одном заряде, расстояние)?</h3>
-        <input type="text" id="333Length1" onchange="updateResult()">
+        <input type="text" id="el1Length" onchange="updateResult()">
         <br>
         <h3>Ваш вес?</h3>
-        <input type="text" id="333Length2" onchange="updateResult()">
+        <input type="text" id="el2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -500,17 +500,17 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="444Details" style="display:none">
+    <div id="lodDetails" style="display:none">
         <h3>Тип лодки?</h3>
         <input type="checkbox" name="chambers" value="пвх" onchange="updateResult()">пвх<br>
         <input type="checkbox" name="chambers" value="пластик" onchange="updateResult()">пластик<br>
         <input type="checkbox" name="chambers" value="алюминий" onchange="updateResult()">алюминий<br>
         <br>
         <h3>На сколько человек (грузоподъемность)?</h3>
-        <input type="text" id="444Length" onchange="updateResult()">
+        <input type="text" id="lodLength" onchange="updateResult()">
         <br>
         <h3>Размеры (ширина и длина)?</h3>
-        <input type="text" id="444Length1" onchange="updateResult()">
+        <input type="text" id="lod1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -519,16 +519,16 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="555Details" style="display:none">
+    <div id="lodmDetails" style="display:none">
         <h3>Какая у вас лодка?</h3>
-        <input type="text" id="555Length" onchange="updateResult()">
+        <input type="text" id="lodmLength" onchange="updateResult()">
         <br>
         <h3>Длина лодки?</h3>
-        <input type="text" id="555Length1" onchange="updateResult()">
+        <input type="text" id="lodm1Length" onchange="updateResult()">
         <br>
         <br>
         <h3>Мощность мотора</h3>
-        <input type="text" id="555Length2" onchange="updateResult()">
+        <input type="text" id="lodm2Length" onchange="updateResult()">
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
@@ -536,16 +536,16 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="666Details" style="display:none">
+    <div id="velDetails" style="display:none">
         <h3>Для кого (взрослый, ребенок)</h3>
         <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()">взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
         <br>
         <h3>Рост</h3>
-        <input type="text" id="666Length" onchange="updateResult()">
+        <input type="text" id="velLength" onchange="updateResult()">
         <br>
         <h3>Размер колес</h3>
-        <input type="text" id="666Length1" onchange="updateResult()">
+        <input type="text" id="vel1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
