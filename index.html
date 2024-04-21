@@ -64,7 +64,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
+                return `${attachmentValues}; ${length}; ${length1};`;
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
@@ -554,7 +554,7 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
     <!-- Shared result field and button -->
-    <br>
+    <br><br><br>
     <textarea id="resultField" rows="3" cols="30"></textarea><br>
     <button onclick="copyToClipboard()">Копировать</button>
 
