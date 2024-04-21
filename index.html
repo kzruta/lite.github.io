@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷8Вопросы</title>
+    <title>🔷0Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -69,7 +69,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}; ${length}; ${length1}`;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
@@ -85,7 +85,7 @@
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
                 var length2 = document.getElementById('moto2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${chamberValues}; ${attachmentValues}; ${length}; ${length1}; ${length2}`;
 
             },
             'Скутеры': function() {
@@ -323,7 +323,7 @@
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
         <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
-        <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
+        <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()">не определился, нужна консультация<br>
     </div>
 
     <div id="33Details" style="display:none">
