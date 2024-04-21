@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷1Вопросы</title>
+    <title>🔷8Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -15,7 +15,7 @@
             'Стиралки': 'stirDetails',
             'Прицепы': 'washerDetails',
             'Лафеты (прицепы для лодок)': 'lafDetails',
-            'Мотоциклы': '22Details',
+            'Мотоциклы': 'motoDetails',
             'Скутеры': '33Details',
             'Мопеды': '44Details',
             'Квадроциклы': '55Details',
@@ -80,11 +80,11 @@
 
             },
             'Мотоциклы': function() {
-                var chambers = document.querySelectorAll('#22Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#motoDetails input[type="checkbox"]:checked');
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
-                var length = document.getElementById('22Length').value;
-                var length1 = document.getElementById('22Length1').value;
-                var length2 = document.getElementById('22Length2').value;
+                var length = document.getElementById('motoLength').value;
+                var length1 = document.getElementById('moto1Length').value;
+                var length2 = document.getElementById('moto2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
 
             },
@@ -309,15 +309,15 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="22Details" style="display:none">
+    <div id="motoDetails" style="display:none">
         <h3>Где планируете кататься, какой тип мотоцикла (дорожный, кросс, эндуро, питбайк)</h3>
-        <input type="text" id="22Length" onchange="updateResult()">
+        <input type="text" id="motoLength" onchange="updateResult()">
         <br>
         <h3>Объем двигателя? Мощность</h3>
-        <input type="text" id="22Length1" onchange="updateResult()">
+        <input type="text" id="moto1Length" onchange="updateResult()">
         <br>
         <h3>Рост (клиента)</h3>
-        <input type="text" id="22Length2" onchange="updateResult()">
+        <input type="text" id="moto2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
