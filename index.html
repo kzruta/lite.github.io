@@ -75,7 +75,7 @@
                 var chambers = document.querySelectorAll('#11Details input[type="checkbox"]:checked');
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('11Length').value;
-                var length1 = document.getElementById('11Length1').value;
+                var length1 = document.getElementById('11_1Length').value;
                 return `${attachmentValues}; ${length}; ${length1}`;
                 return `${chamberValues}`;
             },
@@ -261,10 +261,10 @@
         <input type="checkbox" name="chambers" value="для авто" onchange="updateResult()">для авто<br>
         <input type="checkbox" name="chambers" value="для лодки" onchange="updateResult()">для лодки<br>
         <h3>Количество осей</h3>
-        <input type="checkbox" name="chambers" value="1 ось" onchange="updateResult()">1 ось<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="1 ось" onchange="updateResult()">1 ось<br>
         <input type="checkbox" name="chambers" value="2 оси" onchange="updateResult()">2 оси<br>
         <h3>Категория прав</h3>
-        <input type="checkbox" name="chambers" value="кат В" onchange="updateResult()">кат В<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="кат В" onchange="updateResult()">кат В<br>
         <input type="checkbox" name="chambers" value="кат Е" onchange="updateResult()">кат Е<br>
         <h3>Длина</h3>
         <input type="text" id="washerLength" onchange="updateResult()">
