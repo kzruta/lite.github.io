@@ -72,10 +72,8 @@
                 return `${chamberValues}`;
             },
             'Лафеты (прицепы для лодок)': function() {
-                var chambers = document.querySelectorAll('#11Details input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('11Length').value;
-                var length1 = document.getElementById('11_1Length').value;
+                var length1 = document.getElementById('11Length1').value;
                 return `${attachmentValues}; ${length}; ${length1}`;
                 return `${chamberValues}`;
             },
