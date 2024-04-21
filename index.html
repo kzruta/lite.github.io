@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷5Вопросы</title>
+    <title>🔷1Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -80,15 +80,117 @@
 
             },
             'Мотоциклы': function() {
-                var chambers = document.querySelectorAll('#motoDetails input[type="checkbox"]:checked');
+
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
                 var length2 = document.getElementById('moto2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${chamberValues}; ${length}; ${length1}; ${length2}`;
 
             },
-            
+            'Скутеры': function() {
+                var chambers = document.querySelectorAll('#33Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('33Length').value;
+                return `${attachmentValues}; ${length}`;
+
+            },
+            'Мопеды': function() {
+                var chambers = document.querySelectorAll('#44Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('44Length').value;
+                var length1 = document.getElementById('44Length1').value;
+                return `${attachmentValues}; ${length}; ${length1}`;
+
+            },
+            'Квадроциклы': function() {
+                var chambers = document.querySelectorAll('#55Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('55Length').value;
+                return `${attachmentValues}; ${length};`;
+
+            },
+            'Генераторы': function() {
+                var chambers = document.querySelectorAll('#66Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('66Length').value;
+                var length = document.getElementById('66Length1').value;
+                return `${attachmentValues}; ${length}; ${length1};`;
+
+            },
+            'Мотоблоки и культиваторы': function() {
+                var chambers = document.querySelectorAll('#77Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('77Length').value;
+                return `${attachmentValues}; ${length};`;
+
+            },
+            'Адаптеры для мотоблоков': function() {
+                var chambers = document.querySelectorAll('#88Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('88Length').value;
+                var length1 = document.getElementById('88Length1').value;
+                return `${attachmentValues}; ${length}; ${length1};`;
+
+            },
+            'Навесное на мотоблок': function() {
+                var chambers = document.querySelectorAll('#99Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('99Length').value;
+                return `${attachmentValues}; ${length};`;
+
+            },
+            'Двигатели к мотоблокам': function() {
+                var chambers = document.querySelectorAll('#111Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('111Length').value;
+                var length = document.getElementById('111Length1').value;
+                return `${attachmentValues}; ${length}; ${length1};`;
+
+            },
+            'Навесное для минитракторов': function() {
+                var chambers = document.querySelectorAll('#222Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('222Length').value;
+                var length = document.getElementById('222Length1').value;
+                var length2 = document.getElementById('222Length2').value;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+
+            },
+            'Электротранспорт': function() {
+                var chambers = document.querySelectorAll('#333Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('333Length').value;
+                var length = document.getElementById('333Length1').value;
+                var length2 = document.getElementById('333Length2').value;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+
+            },
+            'Лодки': function() {
+                var chambers = document.querySelectorAll('#444Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('444Length').value;
+                var length = document.getElementById('444Length1').value;
+                return `${attachmentValues}; ${length}; ${length1};`;
+
+            },
+            'Лодочные моторы': function() {
+                var chambers = document.querySelectorAll('#555Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('555Length').value;
+                var length = document.getElementById('555Length1').value;
+                var length2 = document.getElementById('555Length2').value;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+
+            },
+            'Велосипеды': function() {
+                var chambers = document.querySelectorAll('#666Details input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var length = document.getElementById('666Length').value;
+                var length = document.getElementById('666Length1').value;
+                return `${attachmentValues}; ${length}; ${length1};`;
+
+            },
         };
 
         function updateResult() {
