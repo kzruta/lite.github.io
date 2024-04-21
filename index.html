@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷0Вопросы</title>
+    <title>🔷10Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -81,11 +81,10 @@
             },
             'Мотоциклы': function() {
                 var chambers = document.querySelectorAll('#motoDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
-                var length2 = document.getElementById('moto2Length').value;
-                return `${chamberValues}; ${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${attachmentValues}; ${length}; ${length1}`;
 
             },
             'Скутеры': function() {
@@ -145,7 +144,7 @@
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('111Length').value;
                 var length = document.getElementById('111Length1').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
+                return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Навесное для минитракторов': function() {
@@ -154,7 +153,7 @@
                 var length = document.getElementById('222Length').value;
                 var length = document.getElementById('222Length1').value;
                 var length2 = document.getElementById('222Length2').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Электротранспорт': function() {
@@ -163,7 +162,7 @@
                 var length = document.getElementById('333Length').value;
                 var length = document.getElementById('333Length1').value;
                 var length2 = document.getElementById('333Length2').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Лодки': function() {
@@ -171,7 +170,7 @@
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('444Length').value;
                 var length = document.getElementById('444Length1').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
+                return `${attachmentValues}; ${length}; ${length1};`;
 
             },
             'Лодочные моторы': function() {
@@ -180,7 +179,7 @@
                 var length = document.getElementById('555Length').value;
                 var length = document.getElementById('555Length1').value;
                 var length2 = document.getElementById('555Length2').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2}`;
+                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
             },
             'Велосипеды': function() {
@@ -188,7 +187,7 @@
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 var length = document.getElementById('666Length').value;
                 var length = document.getElementById('666Length1').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
+                return `${attachmentValues}; ${length}; ${length1};`;
 
             },
         };
