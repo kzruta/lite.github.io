@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷bВопросы</title>
+    <title>🔷2Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -12,8 +12,8 @@
     <script>
         var categoryDetails = {
             'Холодильники': 'fridgeDetails',
-            'Прицепы': 'washerDetails',
             'Стиралки': 'stirDetails',
+            'Прицепы': 'washerDetails',
             'Лафеты (прицепы для лодок)': 'lafDetails',
             'Мотоциклы': '22Details',
             'Скутеры': '33Details',
@@ -59,6 +59,11 @@
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
                 return ` ${chamberValues}`;
             },
+            'Стиралки': function() {
+                var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                return `${chamberValues}`;
+            },
             'Прицепы': function() {
                 var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
@@ -66,15 +71,12 @@
                 var length1 = document.getElementById('washer1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
             },
-            'Стиралки': function() {
-                var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
-                return `${chamberValues}`;
-            },
             'Лафеты (прицепы для лодок)': function() {
+                var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
+                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${chamberValues}; ${length}; ${length1}`;
+                return `${attachmentValues}; ${length}; ${length1}`;
 
             },
             'Мотоциклы': function() {
