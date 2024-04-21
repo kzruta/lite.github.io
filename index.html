@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷фВопросы</title>
+    <title>🔷Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -80,7 +80,7 @@
 
             },
             'Мотоциклы': function() {
-                
+                var chambers = document.querySelectorAll('#motoDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
