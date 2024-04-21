@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>🔷wВопросы</title>
+    <title>🔷-Вопросы</title>
     <style>
         #resultField {
             width: 300px; /* Увеличиваем ширину текстового поля */
@@ -16,7 +16,7 @@
             'Прицепы': 'washerDetails',
             'Лафеты (прицепы для лодок)': 'lafDetails',
             'Мотоциклы': 'motoDetails',
-            'Скутеры': '33Details',
+            'Скутеры': 'skuDetails',
             'Мопеды': '44Details',
             'Квадроциклы': '55Details',
             'Генераторы': '66Details',
@@ -89,9 +89,9 @@
 
             },
             'Скутеры': function() {
-                var chambers = document.querySelectorAll('#33Details input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#skuDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('33Length').value;
+                var length = document.getElementById('skuLength').value;
                 return `${attachmentValues}; ${length}`;
 
             },
@@ -326,9 +326,9 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()">не определился, нужна консультация<br>
     </div>
 
-    <div id="33Details" style="display:none">
+    <div id="skuDetails" style="display:none">
         <h3>Объем двигателя, мощность?</h3>
-        <input type="text" id="33Length" onchange="updateResult()">
+        <input type="text" id="skuLength" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
