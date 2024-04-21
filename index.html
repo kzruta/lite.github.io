@@ -74,7 +74,7 @@
             'Лафеты (прицепы для лодок)': function() {
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${length}; ${length1}`;
+                return `${chamberValues}; ${length}; ${length1}`;
 
             },
             'Мотоциклы': function() {
@@ -293,7 +293,7 @@
     </div>
 
     <div id="lafDetails" style="display:none">
-        <p><i>Для авто нет - есть подкат для буксировки</i></p><br>
+        <p><i>Для авто нет - есть подкат для буксировки</i></p>
         <h3>Длина судна</h3>
         <input type="text" id="lafLength" onchange="updateResult()">
         <br>
@@ -354,7 +354,7 @@
         <input type="text" id="55Length" onchange="updateResult()">
         <br>
         <h3>Для кого</h3>
-        <br><i>ребенок -- объем двиг. 50-125//взрослый -- от 200</i><br>
+        <p><i>ребенок -- объем двиг. 50-125//взрослый -- от 200</i></p>
         <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()">взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
         <br>
@@ -402,7 +402,7 @@
     </div>
 
     <div id="88Details" style="display:none">
-        <br><i>Модуль переоборудования</i><br>
+        <p><i>Модуль переоборудования</i></p>
         <h3>Какой у вас мотоблок?</h3>
         <input type="text" id="88Length" onchange="updateResult()">
         <br>
@@ -475,8 +475,8 @@
     </div>
 
     <div id="333Details" style="display:none">
-        <i>Электромотоциклы не продаем, предлагать альтернативу - бензиновый. </i><br>
-        <i>Батареи литионные </i><br>
+        <p><i>Электромотоциклы не продаем, предлагать альтернативу - бензиновый. </i></p>
+        <p><i>Батареи литионные </i></p>
         <h3>Тип транспорта</h3>
         <input type="text" id="333Length" onchange="updateResult()">
         <br>
