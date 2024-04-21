@@ -14,7 +14,7 @@
             'Холодильники': 'fridgeDetails',
             'Прицепы': 'washerDetails',
             'Стиралки': 'stirDetails',
-            'Лафеты (прицепы для лодок)': '11Details',
+            'Лафеты (прицепы для лодок)': 'lafDetails',
             'Мотоциклы': '22Details',
             'Скутеры': '33Details',
             'Мопеды': '44Details',
@@ -72,8 +72,8 @@
                 return `${chamberValues}`;
             },
             'Лафеты (прицепы для лодок)': function() {
-                var length = document.getElementById('11Length').value;
-                var length1 = document.getElementById('11Length1').value;
+                var length = document.getElementById('lafLength').value;
+                var length1 = document.getElementById('laf1Length').value;
                 return `${attachmentValues}; ${length}; ${length1}`;
                 return `${chamberValues}`;
             },
@@ -292,13 +292,13 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился, нужна консультация" onchange="updateResult()"> не определился, нужна консультация<br>
     </div>
 
-    <div id="11Details" style="display:none">
-        <h2><i>Для авто нет - есть подкат для буксировки</i></h2><br><br>
+    <div id="lafDetails" style="display:none">
+        <p><i>Для авто нет - есть подкат для буксировки</i></p><br>
         <h3>Длина судна</h3>
-        <input type="text" id="11Length" onchange="updateResult()">
+        <input type="text" id="lafLength" onchange="updateResult()">
         <br>
         <h3>Килевая или плоское дно?</h3>
-        <input type="text" id="11Length1" onchange="updateResult()">
+        <input type="text" id="laf1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
