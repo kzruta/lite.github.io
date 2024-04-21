@@ -74,8 +74,8 @@
             'Лафеты (прицепы для лодок)': function() {
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
-                return `${chamberValues}`;
+                return `${length}; ${length1}`;
+
             },
             'Мотоциклы': function() {
                 var chambers = document.querySelectorAll('#22Details input[type="checkbox"]:checked');
