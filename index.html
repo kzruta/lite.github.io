@@ -89,8 +89,8 @@
                 var length = document.getElementById('fridgeLength').value;
                 var length1 = document.getElementById('fridge1Length').value;
                 var output = length + ', ';
-                var output = length1 + ', ';
-                return `${chamberValues} ${length} ${length1}`;
+                var output1 = length1 + ', ';
+                return `${chamberValues} ${output} ${output1}`;
 
             },
             'Стиралки': function() {
@@ -103,7 +103,9 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join('; ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues}, ${length} длина, ${length1} ширина,`;
+                var output = length + ', ';
+                var output = length1 + ', ';
+                return `${attachmentValues} ${length} ${length1}`;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
