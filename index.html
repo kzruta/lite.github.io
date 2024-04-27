@@ -85,7 +85,7 @@
         var resultUpdater = {
             'Холодильники': function() {
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join('; ');
                 var length = document.getElementById('fridgeLength').value;
                 var length1 = document.getElementById('fridge1Length').value;
                  return `${chamberValues} ${length}, ${length1},`;
@@ -97,7 +97,7 @@
             },
             'Прицепы': function() {
                 var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join('; ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
                 return `${attachmentValues} ${length} длина, ${length1} ширина,`;
