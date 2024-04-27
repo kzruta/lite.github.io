@@ -94,7 +94,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                return `${attachmentValues} ${length} длина, ${length1} ширина,`;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
