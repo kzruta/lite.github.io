@@ -85,13 +85,24 @@
         var resultUpdater = {
             'Холодильники': function() {
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join('; ');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('fridgeLength').value;
                 var length1 = document.getElementById('fridge1Length').value;
-                var output = length + '* ';
-                var output1 = length1 + ', ';
-                return `${chamberValues} ${output} ${output1}`;
+                var result = '';
 
+                if (chamberValues) {
+                    result += chamberValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
@@ -103,9 +114,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join('; ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                var output = length + ', ';
-                var output = length1 + ', ';
-                return `${attachmentValues} ${length} ${length1}`;
+                return `${attachmentValues}, ${length} длина, ${length1} ширина,`;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
