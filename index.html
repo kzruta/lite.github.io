@@ -85,13 +85,13 @@
         var resultUpdater = {
             'Холодильники': function() {
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('fridgeLength').value;
                 var length1 = document.getElementById('fridge1Length').value;
                 var result = '';
 
-                if (chamberValues) {
-                    result += chamberValues + ' ';
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
                 }
                 
                 if (length) {
@@ -106,134 +106,350 @@
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
-                return `${chamberValues}`;
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
+                var result = '';
+
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                
+                return result;
             },
             'Прицепы': function() {
                 var chambers = document.querySelectorAll('#washerDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join('; ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues}, ${length} длина, ${length1} ширина,`;
+                var result = '';
+
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Мотоциклы': function() {
                 var chambers = document.querySelectorAll('#motoDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
                 var length2 = document.getElementById('moto2Length').value;
-                return `${attachmentValues} ${length}, ${length1}, ${length2},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                if (length2) {
+                    result += length2 + ', ';
+                }
+                
+                return result;
             },
             'Скутеры': function() {
                 var chambers = document.querySelectorAll('#skuDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('skuLength').value;
-                return `${attachmentValues} ${length},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                
+                return result;
             },
             'Мопеды': function() {
                 var chambers = document.querySelectorAll('#mopDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('mopLength').value;
                 var length1 = document.getElementById('mop1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Квадроциклы': function() {
                 var chambers = document.querySelectorAll('#kvDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('kvLength').value;
-                return `${attachmentValues} ${length},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+              
+                return result;
             },
             'Генераторы': function() {
                 var chambers = document.querySelectorAll('#genDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('genLength').value;
                 var length1 = document.getElementById('gen1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Мотоблоки и культиваторы': function() {
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('blLength').value;
-                return `${attachmentValues} ${length},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                
+                return result;
             },
             'Адаптеры для мотоблоков': function() {
                 var chambers = document.querySelectorAll('#ablDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('ablLength').value;
                 var length1 = document.getElementById('abl1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
+
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Навесное на мотоблок': function() {
                 var chambers = document.querySelectorAll('#nblDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('nblLength').value;
-                return `${attachmentValues} ${length},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                
+                return result;
             },
             'Двигатели к мотоблокам': function() {
                 var chambers = document.querySelectorAll('#dmbDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('dmbLength').value;
                 var length1 = document.getElementById('dmb1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Навесное для минитракторов': function() {
                 var chambers = document.querySelectorAll('#ntDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('ntLength').value;
                 var length1 = document.getElementById('nt1Length').value;
                 var length2 = document.getElementById('nt2Length').value;
-                return `${attachmentValues} ${length}, ${length1}, ${length2},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                if (length2) {
+                    result += length2 + ', ';
+                }
+                
+                return result;
             },
             'Электротранспорт': function() {
                 var chambers = document.querySelectorAll('#elDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('elLength').value;
                 var length1 = document.getElementById('el1Length').value;
                 var length2 = document.getElementById('el2Length').value;
-                return `${attachmentValues} ${length}, ${length1}, ${length2},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                if (length2) {
+                    result += length2 + ', ';
+                }
+                return result;
             },
             'Лодки': function() {
                 var chambers = document.querySelectorAll('#lodDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('lodLength').value;
                 var length1 = document.getElementById('lod1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
             'Лодочные моторы': function() {
                 var chambers = document.querySelectorAll('#lodm5Details input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('lodmLength').value;
                 var length1 = document.getElementById('lodm1Length').value;
                 var length2 = document.getElementById('lodm2Length').value;
-                return `${attachmentValues} ${length}, ${length1}, ${length2},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                if (length2) {
+                    result += length2 + ', ';
+                }
+                
+                return result;
             },
             'Велосипеды': function() {
                 var chambers = document.querySelectorAll('#velDetails input[type="checkbox"]:checked');
-                var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
+                var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('velLength').value;
                 var length1 = document.getElementById('vel1Length').value;
-                return `${attachmentValues} ${length}, ${length1},`;
+                var result = '';
 
+                if (attachmentValues) {
+                    result += attachmentValues + ' ';
+                }
+                
+                if (length) {
+                    result += length + ', ';
+                }
+                
+                if (length1) {
+                    result += length1 + ', ';
+                }
+                
+                return result;
             },
         };
 
@@ -284,7 +500,7 @@
         <h3>Высота холодильника</h3>
         <!-- <input type="range" id="fridgeHeight" min="0.5" max="2.5" step="0.1" onchange="updateResult()" value="0.5" style="display:none"> -->
         <input type="checkbox" id="chamber4" name="chambers" value="до 1м" onchange="updateResult()"> до 1м<br>
-        <input type="checkbox" id="chamber1" name="chambers" value="1,5м" onchange="updateResult()"> 1,5м<br>
+        <input type="checkbox" id="chamber1" name="chambers" value="1.5м" onchange="updateResult()"> 1.5м<br>
         <input type="checkbox" id="chamber2" name="chambers" value="2м" onchange="updateResult()"> 2м<br>
         <input type="checkbox" id="chamber3" name="chambers" value="выше 2м" onchange="updateResult()"> выше 2м<br>
         <input type="text" id="fridgeLength" onchange="updateResult()">
