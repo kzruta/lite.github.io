@@ -114,7 +114,7 @@
                 var chambers = document.querySelectorAll('#genDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('genLength').value;
-                var length = document.getElementById('gen1Length').value;
+                var length1 = document.getElementById('gen1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
@@ -141,10 +141,10 @@
 
             },
             'Двигатели к мотоблокам': function() {
-                var chambers = document.querySelectorAll('#dblDetails input[type="checkbox"]:checked');
+                var chambers = document.querySelectorAll('#dmbDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
-                var length = document.getElementById('dblLength').value;
-                var length = document.getElementById('dbl1Length').value;
+                var length = document.getElementById('dmbLength').value;
+                var length1 = document.getElementById('dmb1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
@@ -152,7 +152,7 @@
                 var chambers = document.querySelectorAll('#ntDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('ntLength').value;
-                var length = document.getElementById('nt1Length').value;
+                var length1 = document.getElementById('nt1Length').value;
                 var length2 = document.getElementById('nt2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
@@ -161,7 +161,7 @@
                 var chambers = document.querySelectorAll('#elDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('elLength').value;
-                var length = document.getElementById('el1Length').value;
+                var length1 = document.getElementById('el1Length').value;
                 var length2 = document.getElementById('el2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
@@ -170,7 +170,7 @@
                 var chambers = document.querySelectorAll('#lodDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lodLength').value;
-                var length = document.getElementById('lod1Length').value;
+                var length1 = document.getElementById('lod1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
@@ -178,7 +178,7 @@
                 var chambers = document.querySelectorAll('#lodm5Details input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lodmLength').value;
-                var length = document.getElementById('lodm1Length').value;
+                var length1 = document.getElementById('lodm1Length').value;
                 var length2 = document.getElementById('lodm2Length').value;
                 return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
 
@@ -187,7 +187,7 @@
                 var chambers = document.querySelectorAll('#velDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('velLength').value;
-                var length = document.getElementById('vel1Length').value;
+                var length1 = document.getElementById('vel1Length').value;
                 return `${attachmentValues}; ${length}; ${length1};`;
 
             },
