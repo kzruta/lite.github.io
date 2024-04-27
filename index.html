@@ -12,6 +12,10 @@
         div > h3{
             font-size: 20px;
         }
+        option {
+            padding-top: 17px;
+            margin-top: 15px;
+        }
         #resultField {
             width: 400px; /* Увеличиваем ширину текстового поля */
             height: 150px; /* Увеличиваем высоту текстового поля */
@@ -619,8 +623,8 @@
         <br>
         <h3>Для кого</h3>
         <p><i>ребенок -- объем двиг. 50-125//взрослый -- от 200</i></p>
-        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()">взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
+        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()"> взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()"> ребенок<br>
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -648,12 +652,12 @@
         <input type="text" id="blLength" onchange="updateResult()">
         <br>
         <h3>Бензин или дизель?</h3>
-        <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()">бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()">дизель<br>
+        <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()"> дизель<br>
         <br>
         <h3>Производство Китай или РБ?</h3>
-        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()">Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()">РБ<br>
+        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
@@ -670,8 +674,8 @@
         <input type="text" id="abl1Length" onchange="updateResult()">
         <br>
         <h3>Есть ли ВОМ (вал отбора мощности - активная навеска?)</h3>
-        <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()">Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()">Нет ВОМ (вал отбора мощности)<br>
+        <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()"> Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()"> Нет ВОМ (вал отбора мощности)<br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
@@ -681,18 +685,18 @@
 
     <div id="nblDetails" style="display:none">
         <h3>Для какого оборудования?</h3>
-        <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()">мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="минитрактор" onchange="updateResult()">минитрактор<br>
+        <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()"> мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="минитрактор" onchange="updateResult()"> минитрактор<br>
         <br>
         <h3>Сколько л.с.(лошад. сил)?</h3>
         <input type="text" id="nblLength" onchange="updateResult()">
         <br>
         <h3>Производство Китай или РБ?</h3>
-        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()">Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()">РБ<br>
+        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>
         <h3>Есть ли ВОМ (вал отбора мощности - активная навеска?)</h3>
-        <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()">Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()">Нет ВОМ (вал отбора мощности)<br>
+        <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()"> Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()"> Нет ВОМ (вал отбора мощности)<br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
@@ -708,8 +712,8 @@
         <input type="text" id="dmb1Length" onchange="updateResult()">
         <br>
         <h3>Шпонка или шлиц (каким образом крепится)?</h3>
-        <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()">шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="шлиц" onchange="updateResult()">шлиц<br>
+        <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()"> шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="шлиц" onchange="updateResult()"> шлиц<br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
@@ -740,10 +744,9 @@
         <h3>Тип транспорта</h3>
         <input type="text" id="elLength" onchange="updateResult()">
         <br>
-        <br>
         <h3>Для кого</h3>
-        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()">взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
+        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()"> взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()"> ребенок<br>
         <br>
         <h3>Запас хода (пробег на одном заряде, расстояние)?</h3>
         <input type="text" id="el1Length" onchange="updateResult()">
@@ -760,9 +763,9 @@
 
     <div id="lodDetails" style="display:none">
         <h3>Тип лодки?</h3>
-        <input type="checkbox" name="chambers" value="пвх" onchange="updateResult()">пвх<br>
-        <input type="checkbox" name="chambers" value="пластик" onchange="updateResult()">пластик<br>
-        <input type="checkbox" name="chambers" value="алюминий" onchange="updateResult()">алюминий<br>
+        <input type="checkbox" name="chambers" value="пвх" onchange="updateResult()"> пвх<br>
+        <input type="checkbox" name="chambers" value="пластик" onchange="updateResult()"> пластик<br>
+        <input type="checkbox" name="chambers" value="алюминий" onchange="updateResult()"> алюминий<br>
         <br>
         <h3>На сколько человек (грузоподъемность)?</h3>
         <input type="text" id="lodLength" onchange="updateResult()">
@@ -796,8 +799,8 @@
 
     <div id="velDetails" style="display:none">
         <h3>Для кого (взрослый, ребенок)</h3>
-        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()">взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()">ребенок<br>
+        <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()"> взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()"> ребенок<br>
         <br>
         <h3>Рост</h3>
         <input type="text" id="velLength" onchange="updateResult()">
