@@ -89,7 +89,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
             'Мотоциклы': function() {
@@ -98,14 +98,14 @@
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
                 var length2 = document.getElementById('moto2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+                return `${attachmentValues}`;
 
             },
             'Скутеры': function() {
                 var chambers = document.querySelectorAll('#skuDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('skuLength').value;
-                return `${attachmentValues}; ${length}`;
+                return `${attachmentValues}`;
 
             },
             'Мопеды': function() {
@@ -113,14 +113,14 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('mopLength').value;
                 var length1 = document.getElementById('mop1Length').value;
-                return `${attachmentValues}; ${length}; ${length1}`;
+                return `${attachmentValues}`;
 
             },
             'Квадроциклы': function() {
                 var chambers = document.querySelectorAll('#kvDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('kvLength').value;
-                return `${attachmentValues}; ${length};`;
+                return `${attachmentValues}`;
 
             },
             'Генераторы': function() {
@@ -128,14 +128,14 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('genLength').value;
                 var length1 = document.getElementById('gen1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
             'Мотоблоки и культиваторы': function() {
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('blLength').value;
-                return `${attachmentValues}; ${length};`;
+                return `${attachmentValues}`;
 
             },
             'Адаптеры для мотоблоков': function() {
@@ -143,14 +143,14 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('ablLength').value;
                 var length1 = document.getElementById('abl1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
             'Навесное на мотоблок': function() {
                 var chambers = document.querySelectorAll('#nblDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('nblLength').value;
-                return `${attachmentValues}; ${length};`;
+                return `${attachmentValues}`;
 
             },
             'Двигатели к мотоблокам': function() {
@@ -158,7 +158,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('dmbLength').value;
                 var length1 = document.getElementById('dmb1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
             'Навесное для минитракторов': function() {
@@ -167,7 +167,7 @@
                 var length = document.getElementById('ntLength').value;
                 var length1 = document.getElementById('nt1Length').value;
                 var length2 = document.getElementById('nt2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+                return `${attachmentValues}`;
 
             },
             'Электротранспорт': function() {
@@ -176,7 +176,7 @@
                 var length = document.getElementById('elLength').value;
                 var length1 = document.getElementById('el1Length').value;
                 var length2 = document.getElementById('el2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+                return `${attachmentValues}`;
 
             },
             'Лодки': function() {
@@ -184,7 +184,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lodLength').value;
                 var length1 = document.getElementById('lod1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
             'Лодочные моторы': function() {
@@ -193,7 +193,7 @@
                 var length = document.getElementById('lodmLength').value;
                 var length1 = document.getElementById('lodm1Length').value;
                 var length2 = document.getElementById('lodm2Length').value;
-                return `${attachmentValues}; ${length}; ${length1}; ${length2};`;
+                return `${attachmentValues}`;
 
             },
             'Велосипеды': function() {
@@ -201,7 +201,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('velLength').value;
                 var length1 = document.getElementById('vel1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
 
             },
         };
