@@ -17,6 +17,9 @@
             height: 150px; /* Увеличиваем высоту текстового поля */
             display: block; /* Для того, чтобы блок был виден */
         }
+        textarea#resultField {
+            font-size: 16px;
+        }
         button{
             padding: 7px 10px 7px 10px;
             color: black;
@@ -81,10 +84,10 @@
         var resultUpdater = {
             'Холодильники': function() {
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
-                var chamberValues = Array.from(chambers).map(chamber => chamber.value).join(', ');
+                var chamberValues = Array.from(chambers).map(chamber => chamber.value);
                 var length = document.getElementById('fridgeLength').value;
                 var length1 = document.getElementById('fridge1Length').value;
-                 return `${chamberValues} ${length}, ${length1},`;
+                 return `${chamberValues}, ${length}, ${length1},`;
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
