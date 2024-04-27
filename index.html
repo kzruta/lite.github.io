@@ -86,9 +86,9 @@
             'Холодильники': function() {
                 var chambers = document.querySelectorAll('#fridgeDetails input[type="checkbox"]:checked');
                 var chamberValues = Array.from(chambers).map(chamber => chamber.value).join('; ');
-                var length = document.getElementById('fridgeLength').value.join('* ');
-                var length1 = document.getElementById('fridge1Length').value.join('? ');
-                return `${chamberValues} ${length} ${length1}`;
+                var length = document.getElementById('fridgeLength').value;
+                var length1 = document.getElementById('fridge1Length').value;
+                return `${chamberValues}` `${length}, ${length1}`;
             },
             'Стиралки': function() {
                 var chambers = document.querySelectorAll('#stirDetails input[type="checkbox"]:checked');
