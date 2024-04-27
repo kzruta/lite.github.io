@@ -15,7 +15,7 @@
             font-size: 20px;
         }
         button{
-            padding: 10 5 5 10;
+            padding: 15 10 10 15;
             color: black;
             background-color: blanchedalmond;
             font-size: 18px;
@@ -82,7 +82,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('washerLength').value;
                 var length1 = document.getElementById('washer1Length').value;
-                return `${attachmentValues}; ${length}; ${length1};`;
+                return `${attachmentValues}`;
             },
             'Лафеты (прицепы для лодок)': function() {
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
@@ -397,9 +397,6 @@
     <div id="blDetails" style="display:none">
         <h3>Сколько соток земли планируете обрабатывать?</h3>
         <input type="text" id="blLength" onchange="updateResult()">
-        <br>
-        <h3>Планируете ли подключать мощные интсрументы? (сварка, болгарки, станки)</h3>
-        <input type="text" id="66Length1" onchange="updateResult()">
         <br>
         <h3>Бензин или дизель?</h3>
         <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()">бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
