@@ -101,7 +101,7 @@
                 var attachmentValues = Array.from(chambers).map(attachment => attachment.value).join(', ');
                 var length = document.getElementById('lafLength').value;
                 var length1 = document.getElementById('laf1Length').value;
-                return `${attachmentValues}`;
+                return `${attachmentValues} ${length}, ${length1},`;
 
             },
             'Мотоциклы': function() {
@@ -110,7 +110,7 @@
                 var length = document.getElementById('motoLength').value;
                 var length1 = document.getElementById('moto1Length').value;
                 var length2 = document.getElementById('moto2Length').value;
-                return `${attachmentValues}`;
+                return `${attachmentValues} ${length}, ${length1}, ${length2},`;
 
             },
             'Скутеры': function() {
