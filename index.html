@@ -152,7 +152,6 @@
                 var chambers = document.querySelectorAll('#lafDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('lafLength').value;
-                var length1 = document.getElementById('laf1Length').value;
                 var result = '';
 
                 if (attachmentValues) {
@@ -160,13 +159,9 @@
                 }
                 
                 if (length) {
-                    result += length + ', ';
+                    result += length + ' длина, ';
                 }
-                
-                if (length1) {
-                    result += length1 + ', ';
-                }
-                
+                              
                 return result;
             },
             'Мотоциклы': function() {
@@ -580,7 +575,8 @@
         <input type="text" id="lafLength" onchange="updateResult()">
         <br>
         <h3>Килевая или плоское дно</h3>
-        <input type="text" id="laf1Length" onchange="updateResult()">
+        <input type="checkbox" name="chambers" value="килевая" onchange="updateResult()"> килевая<br>
+        <input type="checkbox" name="chambers" value="плоское дно" onchange="updateResult()"> плоское дно<br>
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
