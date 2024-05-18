@@ -481,43 +481,16 @@
             },
         };
 
-// Предположим, у вас есть объект, который хранит состояние чекбоксов (отмечены они или нет)
-var checkboxStates = {};
+        function updateResult() {
+            var category = document.getElementById('categorySelect').value;
+            var resultField = document.getElementById('resultField');
 
-function updateResult() {
-  var checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  var resultField = document.getElementById('resultField');
-  var enteredText = resultField.value;
-
-  // Обновляем состояния чекбоксов
-  checkboxes.forEach(function(checkbox) {
-    checkboxStates[checkbox.id] = checkbox.checked;
-  });
-
-  // Собираем текст только из отмеченных чекбоксов
-  var checkboxText = '';
-  for (var id in checkboxStates) {
-    if (checkboxStates[id]) {
-      var label = document.querySelector('label[for="' + id + '"]');
-      var text = label ? label.innerText : '';
-      if (enteredText.indexOf(text) === -1) { // Добавляем текст, если его нет в уже введенном
-        checkboxText += text + ' ';
-      }
-    }
-  }
-  
-  // Собираем текст из текстовых полей
-  var textInputs = document.querySelectorAll('input[type="text"]');
-  textInputs.forEach(function(textInput) {
-    var textValue = textInput.value.trim();
-    if (textValue && enteredText.indexOf(textValue) === -1) { // Добавляем текст, если его нет в уже введенном
-      enteredText += ' ' + textValue;
-    }
-  });
-
-  // Добавляем текст из чекбоксов к тексту из текстовых полей
-  resultField.value = enteredText + ' ' + checkboxText;
-}
+            // Проверяем, есть ли функция обновления для выбранной категории
+            if (resultUpdater.hasOwnProperty(category)) {
+                // Обновляем результат с помощью функции, соответствующей категории
+                resultField.value = resultUpdater[category]();
+            }
+        }
 
         function copyToClipboard() {
             var resultField = document.getElementById('resultField');
