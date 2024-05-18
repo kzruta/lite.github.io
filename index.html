@@ -267,7 +267,7 @@
                 
                 return result;
             },
-            'Мотоблоки': function() {
+            'Мотоблок': function() {
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('blLength').value;
@@ -534,7 +534,7 @@
         <option value="Мопеды">Мопеды</option>
         <option value="Квадроциклы">Квадроциклы</option>
         <option value="Генераторы">Генераторы</option>
-        <option value="Мотоблоки">Мотоблок</option>
+        <option value="Мотоблок">Мотоблок</option>
         <!-- <option value="Адаптеры для мотоблоков">Адаптеры для мотоблоков</option> --> 
         <option value="Навесное на мотоблок">Навесное на мотоблок</option>
         <option value="Двигатели к мотоблокам">Двигатели к мотоблокам</option>
