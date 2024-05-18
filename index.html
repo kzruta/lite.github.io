@@ -60,7 +60,7 @@
             'Мопеды': 'mopDetails',
             'Квадроциклы': 'kvDetails',
             'Генераторы': 'genDetails',
-            'Мотоблоки и культиваторы': 'blDetails',
+            'Мотоблок': 'blDetails',
             'Адаптеры для мотоблоков': 'ablDetails',
             'Навесное на мотоблок': 'nblDetails',
             'Двигатели к мотоблокам': 'dmbDetails',
@@ -267,7 +267,7 @@
                 
                 return result;
             },
-            'Мотоблоки и культиваторы': function() {
+            'Мотоблоки': function() {
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('blLength').value;
@@ -534,7 +534,7 @@
         <option value="Мопеды">Мопеды</option>
         <option value="Квадроциклы">Квадроциклы</option>
         <option value="Генераторы">Генераторы</option>
-        <option value="Мотоблоки и культиваторы">Мотоблоки и культиваторы</option>
+        <option value="Мотоблоки">Мотоблок</option>
         <!-- <option value="Адаптеры для мотоблоков">Адаптеры для мотоблоков</option> --> 
         <option value="Навесное на мотоблок">Навесное на мотоблок</option>
         <option value="Двигатели к мотоблокам">Двигатели к мотоблокам</option>
@@ -543,8 +543,8 @@
         <option value="Лодки">Лодки</option>
         <option value="Лодочные моторы">Лодочные моторы</option>
         <option value="Велосипеды">Велосипеды</option>
-        <option value="Двигатель на велосипед">Лодочные моторы</option>
-        <option value="Мотошлем">Велосипеды</option>
+        <option value="Двигатель на велосипед">Двигатель на велосипед</option>
+        <option value="Мотошлем">Мотошлем</option>
     </select>
 
     <div id="fridgeDetails" style="display:none">
