@@ -270,7 +270,7 @@
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('blLength').value;
-                var length = document.getElementById('bl1Length').value;
+                var length1 = document.getElementById('bl1Length').value;
                 var result = '';
 
                 if (attachmentValues) {
@@ -686,9 +686,9 @@
         <h4>↓если не знает какой выбрать↓</h4>
         <h3>Производство Беларусь или Китай</h3>
         <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>  
-        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br>
         <h3>Бензин или дизель</h3>
-        <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br>
         <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()"> дизель<br>
         <br>
         <h3>Как будете оплачивать</h3>
