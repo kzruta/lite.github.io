@@ -455,7 +455,27 @@
                 
                 return result;
             },
-            'Мотошлем': function() {
+
+        };
+
+// Пример функции, которая обновляет поле ввода, добавляя к нему данные
+function updateResult() {
+    var resultField = document.getElementById('resultField');
+    // Сохраняем текущее (ранее введенное) значение
+    var currentValue = resultField.value;
+    
+    // Ваша функция 'Мотошлем', возвращающая результат
+    var updateValue = resultUpdater['Мотошлем']();
+    
+    // Добавляем новые данные, только если их нет в текущем тексте.
+    if (!currentValue.includes(updateValue.trim())) {
+        resultField.value = currentValue + updateValue;
+    }
+}
+
+// Объект resultUpdater с вашей функцией 'Мотошлем'
+var resultUpdater = {
+    'Мотошлем': function() {
                 var chambers = document.querySelectorAll('#shlDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('shlLength').value;
@@ -479,18 +499,8 @@
                 }               
                 return result;
             },
-        };
-
-        function updateResult() {
-            var category = document.getElementById('categorySelect').value;
-            var resultField = document.getElementById('resultField');
-
-            // Проверяем, есть ли функция обновления для выбранной категории
-            if (resultUpdater.hasOwnProperty(category)) {
-                // Обновляем результат с помощью функции, соответствующей категории
-                resultField.value = resultUpdater[category]();
-            }
-        }
+    // ...потенциально другие функции для обновления
+};
 
         function copyToClipboard() {
             var resultField = document.getElementById('resultField');
