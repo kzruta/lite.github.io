@@ -335,10 +335,10 @@
                 }
                 
                 if (length1) {
-                    result += length1 + ', ';
+                    result += length1 + 'л.с., ';
                 }
                 if (length2) {
-                    result += length2 + ', ';
+                    result += length2 + 'мм, ';
                 }
                 
                 return result;
@@ -718,7 +718,7 @@
         <h3>Выход вала шпоночный или шлицевой? (вид вала, каким образом крепится)</h3>
         <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()"> шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="шлиц" onchange="updateResult()"> шлиц<br>
-        <h3>Диаметр вала</h3>
+        <h3>Диаметр вала, мм</h3>
         <input type="text" id="dmb2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
