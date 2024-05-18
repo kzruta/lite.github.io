@@ -89,7 +89,8 @@
                 document.getElementById(categoryDetails[category]).style.display = 'block';
             }
         
-           
+            // Очищаем поле результатов
+            resultField.value = '';
         }
 
         // Функции для обновления результатов каждой категории
@@ -487,7 +488,7 @@
             // Проверяем, есть ли функция обновления для выбранной категории
             if (resultUpdater.hasOwnProperty(category)) {
                 // Обновляем результат с помощью функции, соответствующей категории
-                resultField.value = resultUpdater[category]();
+                resultField.value += ' ' + resultUpdater[category]();
             }
         }
 
