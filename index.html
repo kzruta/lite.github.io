@@ -38,7 +38,7 @@
             background-color: rgb(229, 247, 241);
         }
         input[type="text"], input[type="checkbox"]  {
-            font-size: 20px;
+            font-size: 28px;
             margin: 10px 0 0 0;
         }
 
@@ -184,7 +184,7 @@
                     result += length1 + ', ';
                 }
                 if (length2) {
-                    result += length2 + ', ';
+                    result += length2 + ' рост, ';
                 }
                 
                 return result;
@@ -238,7 +238,7 @@
                 }
                 
                 if (length) {
-                    result += length + ', ';
+                    result += length + ' шт., ';
                 }
                 
               
@@ -317,7 +317,7 @@
                 }
                 
                 if (length) {
-                    result += length + ', ';
+                    result += length + ' л.с, ';
                 }
                 
                 
@@ -368,7 +368,7 @@
                     result += length1 + ', ';
                 }
                 if (length2) {
-                    result += length2 + ', ';
+                    result += length2 + ' л.с, ';
                 }
                 
                 return result;
@@ -390,10 +390,10 @@
                 }
                 
                 if (length1) {
-                    result += length1 + ', ';
+                    result += length1 + ' запас.хода, ';
                 }
                 if (length2) {
-                    result += length2 + ', ';
+                    result += length2 + ' кг, ';
                 }
                 return result;
             },
@@ -413,7 +413,7 @@
                 }
                 
                 if (length1) {
-                    result += length1 + ', ';
+                    result += length1 + ' размер, ';
                 }
                 
                 return result;
@@ -435,10 +435,10 @@
                 }
                 
                 if (length1) {
-                    result += length1 + ', ';
+                    result += length1 + ' длина, ';
                 }
                 if (length2) {
-                    result += length2 + ', ';
+                    result += length2 + ' л.с, ';
                 }
                 
                 return result;
@@ -599,7 +599,7 @@
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
         <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
-        <input type="checkbox" id="chamber4" name="chambers" value="не определился нужна консультация" onchange="updateResult()">не определился нужна консультация<br>
+        <input type="checkbox" id="chamber4" name="chambers" value="не определился нужна консультация" onchange="updateResult()"> не определился нужна консультация<br>
     </div>
 
     <div id="skuDetails" style="display:none">
@@ -628,13 +628,13 @@
     </div>
 
     <div id="kvDetails" style="display:none">
-        <h3>Объем двигателя, мощность</h3>
-        <input type="text" id="kvLength" onchange="updateResult()">
-        <br>
         <h3>Для кого</h3>
         <p><i>ребенок -- объем двиг. 50-125//взрослый -- от 200</i></p>
         <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()"> взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()"> ребенок<br>
+        <br>
+        <h3>Объем двигателя, мощность</h3>
+        <input type="text" id="kvLength" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
@@ -663,12 +663,11 @@
         <br>
         <h3>Навесное нужно какое-нибудь</h3>
         <input type="text" id="bl1Length" onchange="updateResult()">
-        <br>
+        <br><br>
         <h4>↓если не знает какой выбрать↓</h4>
-        <br>
-        <h3>Производство Китай или РБ</h3>
-        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <h3>Производство Беларусь или Китай</h3>
         <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>  
+        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <h3>Бензин или дизель</h3>
         <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()"> дизель<br>
@@ -703,7 +702,7 @@
         <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()"> мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="минитрактор" onchange="updateResult()"> минитрактор<br>
         <br>
-        <h3>Сколько л.с.(лошад. сил)</h3>
+        <h3>Сколько л.с.</h3>
         <input type="text" id="nblLength" onchange="updateResult()">
         <br>
         <h3>Производство Китай или РБ</h3>
@@ -757,8 +756,6 @@
     </div>
 
     <div id="elDetails" style="display:none">
-        <p><i>Электромотоциклы не продаем, предлагать альтернативу - бензиновый. </i></p>
-        <p><i>Батареи литионные </i></p>
         <h3>Тип транспорта</h3>
         <input type="text" id="elLength" onchange="updateResult()">
         <br>
