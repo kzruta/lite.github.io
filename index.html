@@ -323,6 +323,7 @@
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('dmbLength').value;
                 var length1 = document.getElementById('dmb1Length').value;
+                var length2 = document.getElementById('nt2Length').value;
                 var result = '';
 
                 if (attachmentValues) {
@@ -335,6 +336,9 @@
                 
                 if (length1) {
                     result += length1 + ', ';
+                }
+                if (length2) {
+                    result += length2 + ', ';
                 }
                 
                 return result;
@@ -715,7 +719,7 @@
         <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()"> шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="шлиц" onchange="updateResult()"> шлиц<br>
         <h3>Диаметр вала</h3>
-        <input type="text" id="dmbLength" onchange="updateResult()">
+        <input type="text" id="dmb2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
