@@ -61,7 +61,6 @@
             'Квадроциклы': 'kvDetails',
             'Генераторы': 'genDetails',
             'Мотоблок': 'blDetails',
- 
             'Навесное на мотоблок': 'nblDetails',
             'Двигатели к мотоблокам': 'dmbDetails',
             'Навесное для минитракторов': 'ntDetails',
@@ -287,7 +286,6 @@
                 
                 return result;
             },
-
             'Навесное на мотоблок': function() {
                 var chambers = document.querySelectorAll('#nblDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
@@ -514,6 +512,7 @@
         <option value="Мопеды">Мопеды</option>
         <option value="Квадроциклы">Квадроциклы</option>
         <option value="Генераторы">Генераторы</option>
+        <option value="Мотоблок">Мотоблок</option>
         <option value="Навесное на мотоблок">Навесное на мотоблок</option>
         <option value="Двигатели к мотоблокам">Двигатели к мотоблокам</option>
         <option value="Навесное для минитракторов">Навесное для минитракторов</option>
@@ -699,8 +698,6 @@
         <input type="checkbox" id="chamber4" name="chambers" value="не определился нужна консультация" onchange="updateResult()"> не определился нужна консультация<br>
     </div>
 
-
-
     <div id="nblDetails" style="display:none">
         <h3>Для какой техники</h3>
         <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()"> мотоблок +какой мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
@@ -730,7 +727,7 @@
         <input type="text" id="dmb2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
-        <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочкa<br>
+        <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
         <input type="checkbox" id="chamber3" name="chambers" value="наличные" onchange="updateResult()"> наличные<br>
         <input type="checkbox" id="chamber4" name="chambers" value="не определился нужна консультация" onchange="updateResult()"> не определился нужна консультация<br>
