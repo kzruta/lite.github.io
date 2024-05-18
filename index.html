@@ -41,6 +41,13 @@
             font-size: 20px;
             margin: 10px 0 0 0;
         }
+
+        input[type="text"], input[type="checkbox"]  {
+            transform:scale(1.3);
+            opacity:0.9;
+            cursor:pointer;
+        }
+
     </style>
     <script>
         var categoryDetails = {
@@ -267,6 +274,7 @@
                 var chambers = document.querySelectorAll('#blDetails input[type="checkbox"]:checked');
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('blLength').value;
+                var length = document.getElementById('bl1Length').value;
                 var result = '';
 
                 if (attachmentValues) {
@@ -276,7 +284,9 @@
                 if (length) {
                     result += length + ', ';
                 }
-                
+                if (length1) {
+                    result += length1 + ', ';
+                }   
                 
                 return result;
             },
@@ -652,16 +662,20 @@
     </div>
 
     <div id="blDetails" style="display:none">
-        <h3>Сколько соток земли планируете обрабатывать</h3>
+        <h3>Сколько л.с (если не знает, то сколько соток земли планируете обрабатывать)</h3>
         <input type="text" id="blLength" onchange="updateResult()">
         <br>
+        <h3>Навесное нужно какое-нибудь</h3>
+        <input type="text" id="bl1Length" onchange="updateResult()">
+        <br>
+        <h4>если не знает какой выбрать</h4><br>
+        <h3>Производство Китай или РБ</h3>
+        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
+        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>  
         <h3>Бензин или дизель</h3>
         <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()"> дизель<br>
         <br>
-        <h3>Производство Китай или РБ</h3>
-        <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
-        <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>
         <h3>Как будете оплачивать</h3>
         <input type="checkbox" id="chamber1" name="chambers" value="рассрочка" onchange="updateResult()"> рассрочка<br>
         <input type="checkbox" id="chamber2" name="chambers" value="кредит" onchange="updateResult()"> кредит<br>
