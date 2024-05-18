@@ -323,7 +323,7 @@
                 var attachmentValues = Array.from(chambers).map(chamber => chamber.value + ',').join(' ');
                 var length = document.getElementById('dmbLength').value;
                 var length1 = document.getElementById('dmb1Length').value;
-                var length2 = document.getElementById('dm2Length').value;
+                var length2 = document.getElementById('dmb2Length').value;
                 var result = '';
 
                 if (attachmentValues) {
@@ -569,7 +569,7 @@
         <h3>Длина судна</h3>
         <input type="text" id="lafLength" onchange="updateResult()">
         <br>
-        <h3>Килевая или плоское дно?</h3>
+        <h3>Килевая или плоское дно</h3>
         <input type="text" id="laf1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -583,7 +583,7 @@
         <h3>Где планируете кататься, какой тип мотоцикла (дорожный, кросс, эндуро, питбайк)</h3>
         <input type="text" id="motoLength" onchange="updateResult()">
         <br>
-        <h3>Объем двигателя? Мощность</h3>
+        <h3>Объем двигателя Мощность</h3>
         <input type="text" id="moto1Length" onchange="updateResult()">
         <br>
         <h3>Рост (клиента)</h3>
@@ -597,7 +597,7 @@
     </div>
 
     <div id="skuDetails" style="display:none">
-        <h3>Объем двигателя, мощность?</h3>
+        <h3>Объем двигателя, мощность</h3>
         <input type="text" id="skuLength" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -608,10 +608,10 @@
     </div>
 
     <div id="mopDetails" style="display:none">
-        <h3>Объем двигателя, мощность?</h3>
+        <h3>Объем двигателя, мощность</h3>
         <input type="text" id="mopLength" onchange="updateResult()">
         <br>
-        <h3>Категория прав?</h3>
+        <h3>Категория прав</h3>
         <input type="text" id="mop1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -622,7 +622,7 @@
     </div>
 
     <div id="kvDetails" style="display:none">
-        <h3>Объем двигателя, мощность?</h3>
+        <h3>Объем двигателя, мощность</h3>
         <input type="text" id="kvLength" onchange="updateResult()">
         <br>
         <h3>Для кого</h3>
@@ -638,10 +638,10 @@
     </div>
 
     <div id="genDetails" style="display:none">
-        <h3>Сколько устройств?</h3>
+        <h3>Сколько устройств</h3>
         <input type="text" id="genLength" onchange="updateResult()">
         <br>
-        <h3>Планируете ли подключать мощные интсрументы? (сварка, болгарки, станки)</h3>
+        <h3>Планируете ли подключать мощные интсрументы (сварка, болгарки, станки)</h3>
         <input type="text" id="gen1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -652,14 +652,14 @@
     </div>
 
     <div id="blDetails" style="display:none">
-        <h3>Сколько соток земли планируете обрабатывать?</h3>
+        <h3>Сколько соток земли планируете обрабатывать</h3>
         <input type="text" id="blLength" onchange="updateResult()">
         <br>
-        <h3>Бензин или дизель?</h3>
+        <h3>Бензин или дизель</h3>
         <input type="checkbox" name="chambers" value="бензин" onchange="updateResult()"> бензин<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="дизель" onchange="updateResult()"> дизель<br>
         <br>
-        <h3>Производство Китай или РБ?</h3>
+        <h3>Производство Китай или РБ</h3>
         <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>
         <h3>Как будете оплачивать</h3>
@@ -671,13 +671,13 @@
 
     <div id="ablDetails" style="display:none">
         <p><i>Модуль переоборудования</i></p>
-        <h3>Какой у вас мотоблок?</h3>
+        <h3>Какой у вас мотоблок</h3>
         <input type="text" id="ablLength" onchange="updateResult()">
         <br>
-        <h3>Сколько л.с.(лошад. сил)?</h3>
+        <h3>Сколько л.с.</h3>
         <input type="text" id="abl1Length" onchange="updateResult()">
         <br>
-        <h3>Есть ли ВОМ (вал отбора мощности - активная навеска?)</h3>
+        <h3>Есть ли ВОМ (вал отбора мощности - активная навеска)</h3>
         <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()"> Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()"> Нет ВОМ (вал отбора мощности)<br>
         <h3>Как будете оплачивать</h3>
@@ -688,17 +688,17 @@
     </div>
 
     <div id="nblDetails" style="display:none">
-        <h3>Для какого оборудования?</h3>
+        <h3>Для какого оборудования</h3>
         <input type="checkbox" name="chambers" value="мотоблок" onchange="updateResult()"> мотоблок<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="минитрактор" onchange="updateResult()"> минитрактор<br>
         <br>
-        <h3>Сколько л.с.(лошад. сил)?</h3>
+        <h3>Сколько л.с.(лошад. сил)</h3>
         <input type="text" id="nblLength" onchange="updateResult()">
         <br>
-        <h3>Производство Китай или РБ?</h3>
+        <h3>Производство Китай или РБ</h3>
         <input type="checkbox" name="chambers" value="Китай" onchange="updateResult()"> Китай<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="РБ" onchange="updateResult()"> РБ<br>
-        <h3>Есть ли ВОМ (вал отбора мощности - активная навеска?)</h3>
+        <h3>Есть ли ВОМ (вал отбора мощности - активная навеска)</h3>
         <input type="checkbox" name="chambers" value="Есть ВОМ (вал отбора мощности)" onchange="updateResult()"> Есть ВОМ (вал отбора мощности)<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="Нет ВОМ (вал отбора мощности)" onchange="updateResult()"> Нет ВОМ (вал отбора мощности)<br>
         <h3>Как будете оплачивать</h3>
@@ -709,13 +709,13 @@
     </div>
 
     <div id="dmbDetails" style="display:none">
-        <h3>Какой у вас мотоблок?</h3>
+        <h3>Какой у вас мотоблок</h3>
         <input type="text" id="dmbLength" onchange="updateResult()">
         <br>
-        <h3>Мотор на сколько л.с.?</h3>
+        <h3>Мотор на сколько л.с.</h3>
         <input type="text" id="dmb1Length" onchange="updateResult()">
         <br>
-        <h3>Выход вала шпоночный или шлицевой? (вид вала, каким образом крепится)</h3>
+        <h3>Выход вала шпоночный или шлицевой (вид вала, каким образом крепится)</h3>
         <input type="checkbox" name="chambers" value="шпонка" onchange="updateResult()"> шпонка<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="шлиц" onchange="updateResult()"> шлиц<br>
         <h3>Диаметр вала, мм</h3>
@@ -729,13 +729,13 @@
     </div>
 
     <div id="ntDetails" style="display:none">
-        <h3>Что вам необходимо?</h3>
+        <h3>Что вам необходимо</h3>
         <input type="text" id="ntLength" onchange="updateResult()">
         <br>
-        <h3>Какой у вас минитрактор?</h3>
+        <h3>Какой у вас минитрактор</h3>
         <input type="text" id="nt1Length" onchange="updateResult()">
         <br>
-        <h3>Сколько л.с.(лошад. сил)?</h3>
+        <h3>Сколько л.с.</h3>
         <input type="text" id="nt2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -755,10 +755,10 @@
         <input type="checkbox" name="chambers" value="взрослый" onchange="updateResult()"> взрослый<br><!--СДЕЛАТЬ ТУТ РАДИОКНОПКИ -->
         <input type="checkbox" name="chambers" value="ребенок" onchange="updateResult()"> ребенок<br>
         <br>
-        <h3>Запас хода (пробег на одном заряде, расстояние)?</h3>
+        <h3>Запас хода (пробег на одном заряде, расстояние)</h3>
         <input type="text" id="el1Length" onchange="updateResult()">
         <br>
-        <h3>Грузоподъемность?</h3>
+        <h3>Грузоподъемность</h3>
         <input type="text" id="el2Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -769,14 +769,14 @@
     </div>
 
     <div id="lodDetails" style="display:none">
-        <h3>Тип лодки?</h3>
+        <h3>Тип лодки</h3>
         <input type="checkbox" name="chambers" value="пвх" onchange="updateResult()"> пвх<br>
         <input type="checkbox" name="chambers" value="пластик" onchange="updateResult()"> пластик<br>
         <input type="checkbox" name="chambers" value="алюминий" onchange="updateResult()"> алюминий<br>
-        <h3>На сколько человек (грузоподъемность)?</h3>
+        <h3>На сколько человек (грузоподъемность)</h3>
         <input type="text" id="lodLength" onchange="updateResult()">
         <br>
-        <h3>Размеры (ширина и длина)?</h3>
+        <h3>Размеры (ширина и длина)</h3>
         <input type="text" id="lod1Length" onchange="updateResult()">
         <br>
         <h3>Как будете оплачивать</h3>
@@ -787,10 +787,10 @@
     </div>
 
     <div id="lodmDetails" style="display:none">
-        <h3>Какая у вас лодка?</h3>
+        <h3>Какая у вас лодка</h3>
         <input type="text" id="lodmLength" onchange="updateResult()">
         <br>
-        <h3>Длина лодки?</h3>
+        <h3>Длина лодки</h3>
         <input type="text" id="lodm1Length" onchange="updateResult()">
         <br>
         <br>
